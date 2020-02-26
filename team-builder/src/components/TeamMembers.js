@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function TeamMembers(props) {
-    console.log(props);
   return <div>{props.teamMembers.map(TeamMember)}</div>;
 }
 
