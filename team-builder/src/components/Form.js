@@ -11,8 +11,14 @@ export default function Form(props) {
     setNewTeamMember({ ...newTeamMember, [ev.target.name]: ev.target.value });
   };
 
+  const submitHandler = ev => {
+    ev.preventDefault();
+    props.addTeamMember(newTeamMember);
+    setNewTeamMember({ name: "", role: "", email: "" });
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <label>
         Name:{" "}
         <input
