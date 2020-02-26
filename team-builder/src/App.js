@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import TeamMembers from "./components/TeamMembers";
+import Form from "./components/Form";
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <TeamMembers teamMembers={teamMembers} />
+      <Form />
     </div>
   );
 }
